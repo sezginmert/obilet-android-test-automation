@@ -11,6 +11,7 @@ import java.time.Duration;
 
 
 public class Driver {
+
     public Driver() {
     }
 
@@ -29,8 +30,8 @@ public class Driver {
                 case "Android":
                     options = new UiAutomator2Options();
                     options.setPlatformName("Android").setAutomationName("UiAutomator2");
-                     options.setApp("C:\\Users\\Oguz\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\obilet.apk");
-                    options.setApp("C:\\Users\\Oguz\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\Apk Bilgisi_2.3.4_apkcombo.com.apk");
+                     options.setApp("C:\\Users\\Dell\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\obilet.apk");
+                    options.setApp("C:\\Users\\Dell\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\Apk Bilgisi_2.3.4_apkcombo.com.apk");
                     options.setAppPackage("com.obilet.androidside");
                     options.setAppActivity("com.obilet.androidside.presentation.screen.splash.activity.SplashScreen");
                     options.setUdid("emulator-5554");
@@ -39,7 +40,7 @@ public class Driver {
                     options.setNewCommandTimeout(Duration.ofMinutes(20));
                     try {
                         driver = new AndroidDriver(
-                                new URL("http://0.0.0.0:4723"), options
+                                new URL("http://127.0.0.1:4723"), options
                         );
                     } catch (MalformedURLException e) {
                         throw new RuntimeException(e);

@@ -86,5 +86,31 @@ public class ReusableMethods {
         driver.perform(Collections.singletonList(swipe));
     }
 
+    public static void scrollWithUiScrollableAndClick(String elementText) {
+        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver(); // Projeye göre özelleşmiş olabilir
+
+        // Kaydırma işlemi
+        driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector().scrollable(true))" +
+                        ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
+        ));
+
+        // Öğeye tıklama
+        driver.findElement(By.xpath("//*[@text='" + elementText + "']")).click();
+    }
+
+    public static void scrollAndSendKeysToElement(String elementText, String inputText) {
+        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver(); // Projeye göre özelleşmiş olabilir
+        // Kaydırma işlemi
+        WebElement element = driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector().scrollable(true))" +
+                        ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
+        ));
+        // Öğeye tıklama
+        element.click();
+        // Metin gönderme
+        element.sendKeys(inputText);
+    }
+
 
 }
