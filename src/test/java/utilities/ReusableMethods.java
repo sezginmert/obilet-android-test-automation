@@ -87,29 +87,53 @@ public class ReusableMethods {
     }
 
     public static void scrollWithUiScrollableAndClick(String elementText) {
-        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver(); // Projeye göre özelleşmiş olabilir
+        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver();
 
-        // Kaydırma işlemi
-        driver.findElement(AppiumBy.androidUIAutomator(
-                "new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
-        ));
+        // Projeye göre özelleşmiş olabilir
 
-        // Öğeye tıklama
-        driver.findElement(By.xpath("//*[@text='" + elementText + "']")).click();
+        try {
+            // Kaydırma işlemi
+            driver.findElement(AppiumBy.androidUIAutomator(
+                    "new UiScrollable(new UiSelector().scrollable(true))" +
+                            ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
+            ));
+
+            // Öğeyi bulma
+            WebElement element = driver.findElement(By.xpath("//*[@text='" + elementText + "']"));
+
+            // Görünürlük kontrolü ve tıklama
+            if (element.isDisplayed()) {
+                element.click();
+            } else {
+                throw new RuntimeException("Element görünür değil: " + elementText);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("scrollWithUiScrollableAndClick başarısız oldu: " + elementText, e);
+        }
     }
 
     public static void scrollAndSendKeysToElement(String elementText, String inputText) {
-        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver(); // Projeye göre özelleşmiş olabilir
-        // Kaydırma işlemi
-        WebElement element = driver.findElement(AppiumBy.androidUIAutomator(
-                "new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
-        ));
-        // Öğeye tıklama
-        element.click();
-        // Metin gönderme
-        element.sendKeys(inputText);
+        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver();
+
+        // Projeye göre özelleşmiş olabilir
+
+        try {
+            // Kaydırma işlemi
+            WebElement element = driver.findElement(AppiumBy.androidUIAutomator(
+                    "new UiScrollable(new UiSelector().scrollable(true))" +
+                            ".scrollIntoView(new UiSelector().text(\"" + elementText + "\"))"
+            ));
+
+            // Görünürlük kontrolü, tıklama ve metin gönderme
+            if (element.isDisplayed()) {
+                element.click();
+                element.sendKeys(inputText);
+            } else {
+                throw new RuntimeException("Element görünür değil: " + elementText);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("scrollAndSendKeysToElement başarısız oldu: " + elementText, e);
+        }
     }
 
 
