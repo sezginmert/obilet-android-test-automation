@@ -23,7 +23,14 @@ public class HomePage {
 
     public void login(){
         ReusableMethods.scrollWithUiScrollableAndClick("Hesabım");
+        ReusableMethods.wait(2);
         ReusableMethods.scrollWithUiScrollableAndClick("ÜYE GİRİŞİ YAPIN");
+        ReusableMethods.wait(2);
+        ReusableMethods.scrollAndSendKeysToElement("E-mail adresinizi giriniz.","oguzhanmelihguclusck@gmail.com");
+        ReusableMethods.wait(2);
+        ReusableMethods.scrollAndSendKeysToElement("Doldurulması zorunludur.","Test123456");
+        ReusableMethods.wait(2);
+        ReusableMethods.scrollWithUiScrollableAndClick("Giriş Yap");
     }
 
 
