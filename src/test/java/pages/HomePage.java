@@ -150,45 +150,8 @@ public class HomePage {
 
     // oguzhan
 
-    @AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/tv_day_number\"])[34]")
-    public WebElement dortTemmuz;
-
-    @AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/tv_day_number\"])[37]")
-    public WebElement yediTemmuz;
-
-    @AndroidFindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.obilet.androidside:id/fav_button\"])[1]")
-    public WebElement favoriButton;
-
-    @AndroidFindBy(xpath = "//android.widget.ImageView[@resource-id=\"com.obilet.androidside:id/back_arrow_toolbar\"]")
-    public WebElement backButton;
-
-    @AndroidFindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/item_root_layout\"])[3]")
-    public WebElement favoriList;
-
-    @AndroidFindBy (xpath = "(//*[@class='android.widget.TextView'])[12]")
-    public WebElement firstOtelonList;
-
-    @AndroidFindBy (xpath = "//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/hotel_name_text\"]")
-    public WebElement firstOtelonFavoriList;
-
-    @AndroidFindBy (xpath = "//*[@class='android.widget.EditText']")
-    public WebElement listName;
-
-    @AndroidFindBy (xpath = "(//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/list_item_layout\"])[2]")
-    public WebElement favoriFirstList;
-
-    @AndroidFindBy (xpath = "//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/create_list\"]")
-    public WebElement createNewList;
 
 
-
-
-    public void clickAndChooseNereye(String text01, String text02) {
-        ReusableMethods.scrollWithUiScrollableAndClick(text01);
-        ReusableMethods.wait(2);
-        ReusableMethods.scrollWithUiScrollableAndClick(text02);
-
-    }
 
 
 }
