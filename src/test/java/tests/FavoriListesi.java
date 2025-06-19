@@ -16,7 +16,6 @@ public class FavoriListesi {
     public void getfavoriListesi() {
 
 
-
         //Kullanıcı login olur
         homePage.login();
         loggerHelper.info("Kullanici login olur");
