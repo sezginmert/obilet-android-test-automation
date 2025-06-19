@@ -29,6 +29,7 @@ Bu proje, **Obilet** mobil uygulamasını **Pixel 8 Pro** cihazı üzerinde test
 
 ## 📁 Proje Yapısı
 
+---
 ObiletMobileTesting/
 ├── .idea/
 ├── Drivers/
@@ -77,11 +78,14 @@ Tüm test senaryoları `tests/` klasörü altında sınıflandırılmıştır.
 
 ---
 
-## 📊 Allure Raporu
+---
 
-Aşağıda Allure ile oluşturulmuş örnek test rapor ekran görüntüsü yer almaktadır:
+## 🧭 Test Kapsamı (User Stories)
 
-![Allure Report Screenshot](https://github.com/user-attachments/assets/7518bec1-3110-4e37-98c5-9b47825ca766)
+- ✅ **US_01:** Araç kiralama filtreleme testi  
+- ✅ **US_02:** Uçak bileti arama ve satın alma  
+- ✅ **US_03:** Otel favori listesine ekleme ve kontrol  
+- ✅ **US_04:** Para birimini değiştirerek otobüs bileti arama  
 
 ---
 
@@ -89,4 +93,5 @@ Aşağıda Allure ile oluşturulmuş örnek test rapor ekran görüntüsü yer a
 
 - **Test Owner / QA Engineer:** Oğuzhan Melih Güçlü  
 - **E-posta:** [oguzhanmguclu@gmail.com](mailto:oguzhanmguclu@gmail.com)  
-- **LinkedIn:** [linkedin.com/in/oguzhanmelihguclu](https://www.linkedin.com/in/oguzhanmelihguclu/)  
+- **LinkedIn:** [linkedin.com/in/oguzhanmelihguclu](https://www.linkedin.com/in/oguzhanmelihguclu/)
+
