@@ -34,6 +34,120 @@ public class HomePage {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // oguzhan
 
     @AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/tv_day_number\"])[34]")
@@ -56,6 +170,14 @@ public class HomePage {
 
     @AndroidFindBy (xpath = "(//*[@class='android.widget.TextView'])[4]")
     public WebElement firstOtelonFavoriList;
+
+    @AndroidFindBy (xpath = "//android.widget.EditText[@resource-id=\"com.obilet.androidside:id/fav_name_text\"]")
+    public WebElement listName;
+
+    @AndroidFindBy (xpath = "(//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/list_item_layout\"])[2]")
+    public WebElement favoriFirstList;
+
+
 
 
     public void clickAndChooseNereye(String text01, String text02) {
