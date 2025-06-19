@@ -15,11 +15,6 @@ public class FavoriListesi {
     @Test
     public void getfavoriListesi() {
 
-        // kullanici gerekli ayarlamalari yapar
-        Driver.getAppiumDriver();
-        loggerHelper.info("Kullanici gerekli ayarlamalari yapar");
-
-
         //Kullanıcı login olur
         homePage.login();
         loggerHelper.info("Kullanici login olur");
