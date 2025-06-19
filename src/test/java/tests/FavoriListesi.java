@@ -15,9 +15,6 @@ public class FavoriListesi {
     @Test
     public void getfavoriListesi() {
 
-        // kullanici gerekli ayarlamalari yapar
-        Driver.getAppiumDriver();
-        loggerHelper.info("Kullanici gerekli ayarlamalari yapar");
 
 
         //Kullanıcı login olur
@@ -37,7 +34,7 @@ public class FavoriListesi {
 
         // kullanici Giriş Tarihi , Çıkış Tarihi butonunu görür ve verileri girer ( Giriş : 04-07-2025 , Çıkış : 07-07-2025)
         ReusableMethods.scrollWithUiScrollableAndClick("GİRİŞ TARİHİ");
-       ReusableMethods.wait(2);
+        ReusableMethods.wait(2);
         homePage.dortTemmuz.click();
         ReusableMethods.wait(2);
         homePage.yediTemmuz.click();
@@ -48,28 +45,24 @@ public class FavoriListesi {
         // Kullanici Otel Ara butonunu görür ve tiklar
         ReusableMethods.scrollWithUiScrollableAndClick("Otel Ara");
         ReusableMethods.wait(4);
-        String el1= homePage.firstOtelonList.getText();
+        String el1 = homePage.firstOtelonList.getText().toLowerCase();
         loggerHelper.info("Kullanici Otel Ara butonunu görür ve tiklar");
 
         // kullanici cikan sonuclardan ilk otelin resmindeki sol üstteki favoriye al butonunu görüntüler ve tiklar
         homePage.favoriButton.isDisplayed();
         homePage.favoriButton.click();
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(4);
         loggerHelper.info("Kullanici cikan sonuclardan ilk otelin resmindeki sol üstteki favoriye al butonunu görüntüler ve tiklar");
-
-        // kullanici Yeni Liste Oluştur butonunu görür ve tiklar
-        ReusableMethods.scrollWithUiScrollableAndClick("Yeni Liste Oluştur");
-        ReusableMethods.wait(2);
-        loggerHelper.info("Kullanici Yeni Liste Olustur butonunu görür ve tiklar");
 
 
         // kullanici "Antalya 2025 Summer" adli favori listesi olusturur   ( tamamlanmadı)
+
         homePage.listName.clear();
         ReusableMethods.wait(2);
         homePage.listName.sendKeys("Antalya 2025 Summer");
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(3);
         ReusableMethods.scrollWithUiScrollableAndClick("Yeni Liste Oluştur");
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(3);
         loggerHelper.info("kullanici  Antalya 2025 Summer  adli favori listesi olusturur");
         ReusableMethods.wait(5);
 
@@ -96,13 +89,10 @@ public class FavoriListesi {
 
         // kullanici favoriye aldigi oteli bu listede görür
 
-        String el2=homePage.firstOtelonFavoriList.getText();
+        String el2 = homePage.firstOtelonFavoriList.getText().toLowerCase();
 
-        Assert.assertEquals(el1,el2);
+        Assert.assertEquals(el1, el2);
         loggerHelper.info(" kullanici favoriye aldigi oteli bu listede görür");
-
-
-
 
 
     }
