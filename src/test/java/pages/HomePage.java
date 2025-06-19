@@ -168,14 +168,17 @@ public class HomePage {
     @AndroidFindBy (xpath = "(//*[@class='android.widget.TextView'])[12]")
     public WebElement firstOtelonList;
 
-    @AndroidFindBy (xpath = "(//*[@class='android.widget.TextView'])[4]")
+    @AndroidFindBy (xpath = "//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/hotel_name_text\"]")
     public WebElement firstOtelonFavoriList;
 
-    @AndroidFindBy (xpath = "//android.widget.EditText[@resource-id=\"com.obilet.androidside:id/fav_name_text\"]")
+    @AndroidFindBy (xpath = "//*[@class='android.widget.EditText']")
     public WebElement listName;
 
     @AndroidFindBy (xpath = "(//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/list_item_layout\"])[2]")
     public WebElement favoriFirstList;
+
+    @AndroidFindBy (xpath = "//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/create_list\"]")
+    public WebElement createNewList;
 
 
 
