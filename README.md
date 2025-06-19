@@ -35,29 +35,29 @@ ObiletMobileTesting/
 ├── Drivers/
 ├── logs/
 ├── src/
-│ └── test/
-│ ├── java/
-│ │ ├── driver/
-│ │ │ ├── BaseTest.java
-│ │ │ ├── BrowserDriver.java
-│ │ │ └── Driver.java
-│ │ ├── pages/
-│ │ │ ├── FavoriPage.java
-│ │ │ ├── HomePage.java
-│ │ │ └── SearchPage.java
-│ │ ├── tests/
-│ │ │ ├── FavoriListesi.java
-│ │ │ ├── HesapOlusturma.java
-│ │ │ └── Obilet.java
-│ │ └── utilities/
-│ │ ├── ConfigReader.java
-│ │ ├── LoggerHelper.java
-│ │ ├── OptionsMet.java
-│ │ └── ReusableMethods.java
-│ └── resources/
-│ ├── obilet.apk
-│ ├── Apk Bilgisi_2.3.4_apkcombo.com.apk
-│ └── log4j2.xml
+│   └── test/
+│       ├── java/
+│       │   ├── driver/
+│       │   │   ├── BaseTest.java
+│       │   │   ├── BrowserDriver.java
+│       │   │   └── Driver.java
+│       │   ├── pages/
+│       │   │   ├── FavoriPage.java
+│       │   │   ├── HomePage.java
+│       │   │   └── SearchPage.java
+│       │   ├── tests/
+│       │   │   ├── FavoriListesi.java
+│       │   │   ├── HesapOlusturma.java
+│       │   │   └── Obilet.java
+│       │   └── utilities/
+│       │       ├── ConfigReader.java
+│       │       ├── LoggerHelper.java
+│       │       ├── OptionsMet.java
+│       │       └── ReusableMethods.java
+│       └── resources/
+│           ├── obilet.apk
+│           ├── Apk Bilgisi_2.3.4_apkcombo.com.apk
+│           └── log4j2.xml
 ├── target/
 ├── .gitignore
 ├── configuration.properties
@@ -78,16 +78,6 @@ Tüm test senaryoları `tests/` klasörü altında sınıflandırılmıştır.
 
 ---
 
----
-
-## 🧭 Test Kapsamı (User Stories)
-
-- ✅ **US_01:** Araç kiralama filtreleme testi  
-- ✅ **US_02:** Uçak bileti arama ve satın alma  
-- ✅ **US_03:** Otel favori listesine ekleme ve kontrol  
-- ✅ **US_04:** Para birimini değiştirerek otobüs bileti arama  
-
----
 
 ## 📬 İletişim
 
