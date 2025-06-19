@@ -63,3 +63,25 @@
 2025-06-19 10:50:06 [main] INFO  utilities.LoggerHelper - Kullanici NEREYE butonunu görür tiklar ve ardindan Antalya'yi secer
 2025-06-19 10:50:14 [main] INFO  utilities.LoggerHelper - Kullanici Giris Tarihi ve Cikis Tarihi butonlarini görür ve verileri girer
 2025-06-19 10:50:20 [main] INFO  utilities.LoggerHelper - Kullanici Otel Ara butonunu görür ve tiklar
+2025-06-19 11:08:06 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:08:59 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:12:46 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:13:46 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:15:41 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:16:21 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 11:16:47 [main] INFO  utilities.LoggerHelper - Kullanici login olur
+2025-06-19 11:16:53 [main] INFO  utilities.LoggerHelper - Kullanici anasayfaya gider ve Otel butonunu görür ardından tiklar
+2025-06-19 11:16:59 [main] INFO  utilities.LoggerHelper - Kullanici NEREYE butonunu görür tiklar ve ardindan Antalya'yi secer
+2025-06-19 11:17:08 [main] INFO  utilities.LoggerHelper - Kullanici Giris Tarihi ve Cikis Tarihi butonlarini görür ve verileri girer
+2025-06-19 11:17:13 [main] INFO  utilities.LoggerHelper - Kullanici Otel Ara butonunu görür ve tiklar
+2025-06-19 11:17:15 [main] INFO  utilities.LoggerHelper - Kullanici cikan sonuclardan ilk otelin resmindeki sol üstteki favoriye al butonunu görüntüler ve tiklar
+2025-06-19 11:17:18 [main] INFO  utilities.LoggerHelper - Kullanici Yeni Liste Olustur butonunu görür ve tiklar
+2025-06-19 11:17:25 [main] INFO  utilities.LoggerHelper - kullanici  Antalya 2025 Summer  adli favori listesi olusturur
+2025-06-19 11:17:31 [main] INFO  utilities.LoggerHelper - Kullanici anasayfaya geri doner
+2025-06-19 11:17:35 [main] INFO  utilities.LoggerHelper - Kullanici hesabim butonunu gorur ve tiklar
+2025-06-19 11:17:35 [main] INFO  utilities.LoggerHelper - kullanici favorilerim Butonunu görür ve tiklar
+2025-06-19 11:17:39 [main] INFO  utilities.LoggerHelper - kullanici "Antalya 2025 Summer" adli favori listesini görür ve tiklar
+2025-06-19 12:18:20 [main] INFO  utilities.LoggerHelper - Kullanici gerekli ayarlamalari yapar
+2025-06-19 12:18:55 [main] INFO  utilities.LoggerHelper - Kullanici login olur
+2025-06-19 12:19:07 [main] INFO  utilities.LoggerHelper - Kullanici anasayfaya gider ve Otel butonunu görür ardından tiklar
+2025-06-19 12:19:13 [main] INFO  utilities.LoggerHelper - Kullanici NEREYE butonunu görür tiklar ve ardindan Antalya'yi secer
