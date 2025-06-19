@@ -3,13 +3,18 @@ package tests;
 import driver.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.FavoriPage;
 import pages.HomePage;
+import pages.SearchPage;
 import utilities.LoggerHelper;
 import utilities.ReusableMethods;
 
 public class FavoriListesi {
 
     HomePage homePage = new HomePage();
+    FavoriPage favoriPage = new FavoriPage();
+    SearchPage searchPage = new SearchPage();
+
     LoggerHelper loggerHelper = new LoggerHelper();
 
     @Test
@@ -27,16 +32,16 @@ public class FavoriListesi {
         loggerHelper.info("Kullanici anasayfaya gider ve Otel butonunu görür ardından tiklar");
 
         // kullanici NEREYE butonunu görür ve Antalya secer
-        homePage.clickAndChooseNereye("NEREYE", "Antalya");
+        searchPage.clickAndChooseWhere("NEREYE", "Antalya");
         ReusableMethods.wait(2);
         loggerHelper.info("Kullanici NEREYE butonunu görür tiklar ve ardindan Antalya'yi secer");
 
         // kullanici Giriş Tarihi , Çıkış Tarihi butonunu görür ve verileri girer ( Giriş : 04-07-2025 , Çıkış : 07-07-2025)
         ReusableMethods.scrollWithUiScrollableAndClick("GİRİŞ TARİHİ");
         ReusableMethods.wait(2);
-        homePage.dortTemmuz.click();
+        searchPage.fourJuly.click();
         ReusableMethods.wait(2);
-        homePage.yediTemmuz.click();
+        searchPage.sevenJuly.click();
         ReusableMethods.wait(2);
         ReusableMethods.scrollWithUiScrollableAndClick("UYGULA");
         loggerHelper.info("Kullanici Giris Tarihi ve Cikis Tarihi butonlarini görür ve verileri girer");
@@ -44,21 +49,21 @@ public class FavoriListesi {
         // Kullanici Otel Ara butonunu görür ve tiklar
         ReusableMethods.scrollWithUiScrollableAndClick("Otel Ara");
         ReusableMethods.wait(4);
-        String el1 = homePage.firstOtelonList.getText().toLowerCase();
+        String el1 = searchPage.firstOtelOnSearchList.getText().toLowerCase();
         loggerHelper.info("Kullanici Otel Ara butonunu görür ve tiklar");
 
         // kullanici cikan sonuclardan ilk otelin resmindeki sol üstteki favoriye al butonunu görüntüler ve tiklar
-        homePage.favoriButton.isDisplayed();
-        homePage.favoriButton.click();
+        searchPage.favoriButton.isDisplayed();
+        searchPage.favoriButton.click();
         ReusableMethods.wait(4);
         loggerHelper.info("Kullanici cikan sonuclardan ilk otelin resmindeki sol üstteki favoriye al butonunu görüntüler ve tiklar");
 
 
         // kullanici "Antalya 2025 Summer" adli favori listesi olusturur   ( tamamlanmadı)
 
-        homePage.listName.clear();
+        favoriPage.favListName.clear();
         ReusableMethods.wait(2);
-        homePage.listName.sendKeys("Antalya 2025 Summer");
+        favoriPage.favListName.sendKeys("Antalya 2025 Summer");
         ReusableMethods.wait(3);
         ReusableMethods.scrollWithUiScrollableAndClick("Yeni Liste Oluştur");
         ReusableMethods.wait(3);
@@ -66,7 +71,7 @@ public class FavoriListesi {
         ReusableMethods.wait(5);
 
         // kullanici anasyafaya geri döner
-        homePage.backButton.click();
+        searchPage.backButton.click();
         loggerHelper.info("Kullanici anasayfaya geri doner");
 
 
@@ -76,22 +81,25 @@ public class FavoriListesi {
 
 
         // kullanici favorilerim Butonunu görür ve tiklar
-        homePage.favoriList.isDisplayed();
-        homePage.favoriList.click();
+        favoriPage.favList.isDisplayed();
+        favoriPage.favList.click();
         loggerHelper.info("kullanici favorilerim Butonunu görür ve tiklar");
 
         // kullanici "Antalya 2025 Summer" adli favori listesini görür ve tiklar
-        homePage.favoriFirstList.click();
+        favoriPage.favFirstList.click();
         ReusableMethods.wait(2);
         loggerHelper.info("kullanici \"Antalya 2025 Summer\" adli favori listesini görür ve tiklar");
 
 
         // kullanici favoriye aldigi oteli bu listede görür
 
-        String el2 = homePage.firstOtelonFavoriList.getText().toLowerCase();
+        String el2 = favoriPage.firstOtelOnFavList.getText().toLowerCase();
 
         Assert.assertEquals(el1, el2);
         loggerHelper.info(" kullanici favoriye aldigi oteli bu listede görür");
+
+       // yapilan islemlerin silinmesi
+        favoriPage.cleanupTestData();
 
 
     }
