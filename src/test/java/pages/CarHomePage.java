@@ -22,7 +22,7 @@ public class CarHomePage {
     @AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.obilet.androidside:id/find_journey_location_recyclerView\"]/android.widget.LinearLayout[1]")
     public WebElement locationClick;
 
-    @AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id=\"com.obilet.androidside:id/tv_day_number\"])[47]")
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id=\"com.obilet.androidside:id/find_rent_car_pick_up_date_layout\"]")
     public WebElement rentalDate;
 
 }

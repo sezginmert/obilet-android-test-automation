@@ -24,7 +24,7 @@ public class Driver {
                     options = new UiAutomator2Options();
                     options.setPlatformName("Android")
                             .setAutomationName("UiAutomator2")
-                            // .setApp("C:\\Users\\Oguz\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\obilet.apk") // Artık gerekli değil
+                            //.setApp("C:\\Users\\Dell\\IdeaProjects\\ObiletMobileTesting\\src\\test\\resources\\obilet.apk") // Artık gerekli değil
                             .setAppPackage("com.obilet.androidside")
                             .setAppActivity("com.obilet.androidside.presentation.screen.splash.activity.SplashScreen")
                             .setUdid("emulator-5554")

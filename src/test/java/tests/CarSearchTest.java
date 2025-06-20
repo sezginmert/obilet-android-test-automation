@@ -27,9 +27,8 @@ public class CarSearchTest {
         ReusableMethods.wait(2);
         carHomePage.rentalDate.click();
         ReusableMethods.wait(2);
-        homePage.dortTemmuz.click();
-        ReusableMethods.wait(2);
-        homePage.yediTemmuz.click();
+
+
 
 
 
