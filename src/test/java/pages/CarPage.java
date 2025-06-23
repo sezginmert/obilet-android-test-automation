@@ -3,6 +3,7 @@ package pages;
 import driver.Driver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -77,22 +78,17 @@ public class CarPage {
     @Step("Go to the cars page and select a city")
     public void goToTheCarsPageAndSelectCity() {
         ReusableMethods.scrollWithUiScrollableAndClick("Araç");
-        loggerHelper.info("Go to the vehicle section on the Obilet homepage");
-
 
         placeOfPurchaseClick.click();
-        loggerHelper.info("Clicks on the search box to select a pickup location");
 
         placeOfPurchaseSendKeys.sendKeys("Ankara Yüksek Hızlı Tren Garı");
-        loggerHelper.info("Enter the place where you bought the car into the search box");
 
         actions.sendKeys(Keys.ENTER).perform();
         ReusableMethods.wait(5);
-        loggerHelper.info("After entering the required purchase location, you can search here with enter to list the results.");
 
         locationClick.click();
         ReusableMethods.wait(5);
-        loggerHelper.info("Selects the pickup location as Ankara from the listed search results.");
+
 
     }
 
@@ -143,13 +139,11 @@ public class CarPage {
         ReusableMethods.scrollWithUiScrollableAndClick("11:00");
         ReusableMethods.wait(1);
         SearchForARentalcarButton.click();
-        loggerHelper.info("Press the search button and find a vehicle that matches the date.");
+        ReusableMethods.wait(6);
     }
 
     public void campaignClose(){
         campaignClose.click();
-        loggerHelper.info("Opened ad campaign is closed");
-
     }
 
 

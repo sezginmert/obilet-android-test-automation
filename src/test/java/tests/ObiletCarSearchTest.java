@@ -25,6 +25,7 @@ public class ObiletCarSearchTest extends BaseTest {
     public void carSearchAndFiltering() {
 
         carPage.goToTheCarsPageAndSelectCity();
+        loggerHelper.info("Go to the vehicle section on the Obilet homepage");
 
         carPage.selectCheckInAndOutDates();
         loggerHelper.info("Selects the pick-up date and delivery date");
@@ -33,9 +34,9 @@ public class ObiletCarSearchTest extends BaseTest {
         loggerHelper.info("Choose pick-up time and delivery time");
 
         carPage.campaignClose();
+        loggerHelper.info("Opened ad campaign is closed");
 
         carPage.filterByCriteria();
-
         loggerHelper.info("Filtering is done for the desired features in the vehicle.");
 
 
