@@ -78,7 +78,7 @@ ObiletMobileTesting/
 A successful test run is illustrated below using **Allure Reports**, which showcases the `AddHotelToFavoritesTest` with detailed step execution and timing:
 
 <p align="center">
-  <img src="attachments/k9omUUa436mna397oLKVc.png" alt="Allure Report Example" width="700"/>
+  <img src="images/allure-report-example.png" alt="Allure Report Example" width="700"/>
 </p>
 
 - **Test Class:** `tests.AddHotelToFavoritesTest`  
