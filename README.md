@@ -38,31 +38,37 @@ ObiletMobileTesting/
 │   └── test/
 │       ├── java/
 │       │   ├── driver/
-│       │   │   ├── BaseTest.java
-│       │   │   ├── BrowserDriver.java
-│       │   │   └── Driver.java
+│       │   │   ├── BaseTest
+│       │   │   ├── BrowserDriver
+│       │   │   └── Driver
 │       │   ├── pages/
-│       │   │   ├── FavoriPage.java
-│       │   │   ├── HomePage.java
-│       │   │   └── SearchPage.java
+│       │   │   ├── CarPage
+│       │   │   ├── FavoriPage
+│       │   │   ├── HomePage
+│       │   │   ├── LoginAndCreatePage
+│       │   │   └── SearchPage
 │       │   ├── tests/
-│       │   │   ├── FavoriListesi.java
-│       │   │   ├── HesapOlusturma.java
-│       │   │   └── Obilet.java
+│       │   │   ├── AddHotelToFavoritesTest
+│       │   │   ├── CurrencySwitcherTest
+│       │   │   └── ObiletCarSearchTest
 │       │   └── utilities/
-│       │       ├── ConfigReader.java
-│       │       ├── LoggerHelper.java
-│       │       ├── OptionsMet.java
-│       │       └── ReusableMethods.java
+│       │       ├── ConfigReader
+│       │       ├── LoggerHelper
+│       │       ├── OptionsMet
+│       │       ├── ReusableMethods
+│       │       └── ScreenshotUtil
 │       └── resources/
-│           ├── obilet.apk
-│           ├── Apk Bilgisi_2.3.4_apkcombo.com.apk
-│           └── log4j2.xml
+│           ├── Apk Bilgisi_2.3.4_apkcombo.com
+│           ├── log4j2.xml
+│           └── obilet.apk
 ├── target/
 ├── .gitignore
 ├── configuration.properties
 ├── pom.xml
+├── README.md
 ├── testng.xml
+├── External Libraries/
+
 ```
 
 ---
