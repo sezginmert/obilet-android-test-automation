@@ -1,5 +1,6 @@
 package tests;
 
+import driver.BaseTest;
 import driver.Driver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import utilities.LoggerHelper;
 
 import java.io.IOException;
 
-public class ObiletCarSearchTest {
+public class ObiletCarSearchTest extends BaseTest {
 
     Actions actions = new Actions(Driver.getAppiumDriver());
     CarPage carPage = new CarPage();

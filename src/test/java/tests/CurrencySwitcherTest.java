@@ -1,5 +1,6 @@
 package tests;
 
+import driver.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FavoriPage;
@@ -8,7 +9,7 @@ import pages.SearchPage;
 import utilities.LoggerHelper;
 import utilities.ReusableMethods;
 
-public class CurrencySwitcherTest {
+public class CurrencySwitcherTest extends BaseTest {
 
     HomePage homePage = new HomePage();
     FavoriPage favoriPage = new FavoriPage();
