@@ -74,7 +74,7 @@ ObiletMobileTesting/
 
 Below is the Allure Report screenshot generated for the **Obilet Mobile Test Automation Project**, demonstrating overall suite execution and visual test summaries:
 
-![Allure Report Summary](attachments/5kvVtBqewjRfC5Wm6yMYC.png)
+
 
 - **Suite:** ObiletMobileTesting  
 - **Test Classes Covered:** AddHotelToFavoritesTest, CurrencySwitcherTest, ObiletCarSearchTest  
