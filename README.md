@@ -70,20 +70,19 @@ ObiletMobileTesting/
 ├── External Libraries/
 
 ```
-
 ## 📊 Test Report
 
-Below is the Allure Report screenshot generated for the **Obilet Mobile Test Automation Project**, demonstrating a successful test execution with detailed timing and steps:
+Below is the Allure Report screenshot generated for the **Obilet Mobile Test Automation Project**, demonstrating overall suite execution and visual test summaries:
 
-![Allure Report – Obilet Automation Test](attachments/mA6wsVnbmJASkwspwuoGx.png)
+![Allure Report Summary](attachments/5kvVtBqewjRfC5Wm6yMYC.png)
 
-- **Test Suite:** `ObiletMobileTesting`  
-- **Test Class:** `tests.AddHotelToFavoritesTest`  
-- **Test Case:** `shouldAddHotelToFavoritesSuccessfully`  
-- **Status:** Passed ✅  
-- **Severity:** Normal  
-- **Duration:** 1m 09s  
-- **Setup:** 15s 036ms | **TearDown:** 657ms | **TearDownClass:** 1ms
+- **Suite:** ObiletMobileTesting  
+- **Test Classes Covered:** AddHotelToFavoritesTest, CurrencySwitcherTest, ObiletCarSearchTest  
+- **Total Tests:** 3  
+- **Passed:** ✅ All tests successfully executed  
+- **Report Type:** Interactive HTML powered by Allure  
+- **Generated Using:** `allure serve target/allure-results`
+
 
 
 ---
