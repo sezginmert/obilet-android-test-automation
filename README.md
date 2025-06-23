@@ -100,9 +100,9 @@ All test scenarios are categorized under the `tests/` folder.
 
 ## 📬 Contact
 
-- **Test Owner / QA Engineer:** Oğuzhan Melih Güçlü  
 - **Test Owner / QA Engineer:** Sezgin MERT
-- **Email:** [oguzhanmguclu@gmail.com](mailto:oguzhanmguclu@gmail.com)  
+- **Test Owner / QA Engineer:** Oğuzhan Melih Güçlü  
 - **Email:** [sezginmertt@yahoo.com](mailto:sezginmertt@yahoo.com)
-- **LinkedIn:** [linkedin.com/in/oguzhanmelihguclu](https://www.linkedin.com/in/oguzhanmelihguclu/)
+- **Email:** [oguzhanmguclu@gmail.com](mailto:oguzhanmguclu@gmail.com)
 - **LinkedIn:** [https://www.linkedin.com/in/sezginmert/](https://www.linkedin.com/in/sezginmert/)
+- **LinkedIn:** [linkedin.com/in/oguzhanmelihguclu](https://www.linkedin.com/in/oguzhanmelihguclu/)
