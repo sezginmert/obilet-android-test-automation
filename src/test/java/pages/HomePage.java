@@ -148,10 +148,4 @@ public class HomePage {
 
 
 
-    // oguzhan
-
-
-
-
-
 }

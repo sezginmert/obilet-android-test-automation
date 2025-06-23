@@ -8,13 +8,18 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -25,14 +30,15 @@ import java.util.Date;
 import static driver.Driver.getAppiumDriver;
 import static java.time.Duration.ofMillis;
 import static java.util.Collections.singletonList;
+import static org.openqa.selenium.By.xpath;
 
 
 public class ReusableMethods {
     private static DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
 
-    static WebDriver driver;
 
+    WebDriver driver;
 
     public static void apkYukle() {
 
@@ -99,7 +105,7 @@ public class ReusableMethods {
             ));
 
             // Öğeyi bulma
-            WebElement element = driver.findElement(By.xpath("//*[@text='" + elementText + "']"));
+            WebElement element = driver.findElement(xpath("//*[@text='" + elementText + "']"));
 
             // Görünürlük kontrolü ve tıklama
             if (element.isDisplayed()) {
@@ -135,6 +141,47 @@ public class ReusableMethods {
             throw new RuntimeException("scrollAndSendKeysToElement başarısız oldu: " + elementText, e);
         }
     }
+
+
+
+    public static void screenShotElement(String text) throws IOException {
+        WebElement element = Driver.getAppiumDriver().findElement(xpath("//*[@text='"+text+"']"));
+        Point location = element.getLocation();
+        Dimension size = element.getSize();
+
+        // Ekran görüntüsünü alın ve belirli bölgeyi kırpın
+        File screenshot = Driver.getAppiumDriver().getScreenshotAs(OutputType.FILE);
+        BufferedImage fullImage = ImageIO.read(screenshot);
+        BufferedImage croppedImage = fullImage.getSubimage(location.getX(), location.getY(), size.getWidth(), size.getHeight());
+
+        // Kırpılmış görüntüyü kaydedin
+        File output = new File("kırpılmış_screenshot.png");
+        ImageIO.write(croppedImage, "png", output);
+
+        // Bağlantıyı kapat
+        Driver.quitAppiumDriver();
+    }
+
+
+    public static String getScreenshot(String name) throws IOException {
+        // naming the screenshot with the current date to avoid duplication
+        String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        // TakesScreenshot is an interface of selenium that takes the screenshot
+        TakesScreenshot ts = (TakesScreenshot)Driver.getAppiumDriver();
+
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        // full path to the screenshot location
+        String target = System.getProperty("user.dir") + "/target/Screenshots/" + name + date + ".png";
+        File finalDestination = new File(target);
+        // save the screenshot to the path given
+        FileUtils.copyFile(source, finalDestination);
+        return target;
+    }
+
+
+
+
+
 
 
 }
