@@ -73,6 +73,24 @@ ObiletMobileTesting/
 
 ---
 
+## 📊 Allure Report Example
+
+A successful test run is illustrated below using **Allure Reports**, which showcases the `AddHotelToFavoritesTest` with detailed step execution and timing:
+
+<p align="center">
+  <img src="attachments/k9omUUa436mna397oLKVc.png" alt="Allure Report Example" width="700"/>
+</p>
+
+- **Test Class:** `tests.AddHotelToFavoritesTest`  
+- **Test Case:** `shouldAddHotelToFavoritesSuccessfully`  
+- **Status:** Passed ✅  
+- **Duration:** 1 minute 9 seconds  
+- **Setup:** ~15s | **TearDown:** 657ms  
+
+---
+
+---
+
 ## 🧭 Test Scope (User Stories)
 
 - ✅ **US_01:** Vehicle rental filtering test  
