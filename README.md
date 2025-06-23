@@ -71,23 +71,20 @@ ObiletMobileTesting/
 
 ```
 
----
+## 📊 Test Report
 
-## 📊 Allure Report Example
+Below is the Allure Report screenshot generated for the **Obilet Mobile Test Automation Project**, demonstrating a successful test execution with detailed timing and steps:
 
-A successful test run is illustrated below using **Allure Reports**, which showcases the `AddHotelToFavoritesTest` with detailed step execution and timing:
+![Allure Report – Obilet Automation Test](attachments/mA6wsVnbmJASkwspwuoGx.png)
 
-<p align="center">
-  <img src="images/allure-report-example.png" alt="Allure Report Example" width="700"/>
-</p>
-
+- **Test Suite:** `ObiletMobileTesting`  
 - **Test Class:** `tests.AddHotelToFavoritesTest`  
 - **Test Case:** `shouldAddHotelToFavoritesSuccessfully`  
 - **Status:** Passed ✅  
-- **Duration:** 1 minute 9 seconds  
-- **Setup:** ~15s | **TearDown:** 657ms  
+- **Severity:** Normal  
+- **Duration:** 1m 09s  
+- **Setup:** 15s 036ms | **TearDown:** 657ms | **TearDownClass:** 1ms
 
----
 
 ---
 
